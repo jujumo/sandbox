@@ -14,10 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: docker build and push
-      pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: jumo20201124/jumo20201124
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
+        tag_names: true
+	tags: "latest"
