@@ -1,7 +1,7 @@
 # This workflows will upload a Python Package using Twine when a release is created
 # For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
-name: kapture-localization-release
+name: docker-build
 
 on:
   release:
@@ -16,7 +16,7 @@ jobs:
     - name: docker build and push
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: jumo20201122/alpine_test
+        name: jumo20201122/jumo20201122
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tag_names: true
