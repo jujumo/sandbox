@@ -13,14 +13,14 @@ jobs:
     - name: docker build and push
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: kapture/kapture-localization
+        name: jumo20201124/jumo20201124
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         tag_names: true
     - name: docker build and push
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: kapture/kapture-localization
+        name: jumo20201124/jumo20201124
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         tags: "latest"
