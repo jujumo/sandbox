@@ -16,7 +16,7 @@ jobs:
     - name: docker build and push
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: jumo20201122/jumo20201122
+        name: jumo20201124/jumo20201124
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tag_names: true
