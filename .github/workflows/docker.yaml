@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: docker build and push
-      uses: elgohr/Publish-Docker-Github-Action@master
       pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
+      uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: jumo20201124/jumo20201124
         username: ${{ secrets.DOCKER_USERNAME }}
